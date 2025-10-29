@@ -16,7 +16,7 @@ while True:
     print("2. Listar gastos")
     print("3. Salvar e encerrar")
     escolha = input("Escolha uma opção: ")
-    resultado = utilidade(escolha)
+    resultado = utilidade(escolha, ws, wb)
     if resultado == "quebra":
         break
 
