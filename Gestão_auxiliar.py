@@ -1,9 +1,21 @@
 def utilidade(escolha):
     while True:
         if escolha == '1':
-            Valor_saida = input("Valor gasto: ")
+            while True:
+                Valor_saida = int(input("Valor gasto: "))
+                if Valor_saida <= 0:
+                    print("Saída invalida")
+                    continue
+                break
+
+            while True:
+                cat = input("Que tipo de transação:")
+                if cat == "":
+                    print("Saída invalida")
+                    continue
+                break
             data = input("Data da transação:")
-            cat = input("Que tipo de transação:")
+
             ws.append([Valor_saida, data, cat])
             wb.save("GerenGast.xlsx")
 
